@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — VVault</title>
+  <meta name="description" content="How VVault handles your data: client-side encryption, biometric lock, offline-first, and no selling of personal data." />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <script src="analytics.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .legal{max-width:46rem;margin:0 auto;padding:clamp(2rem,5vw,4rem) clamp(1rem,4vw,2rem)}
+    .legal h1{font-size:clamp(2rem,4vw,2.6rem);margin-bottom:.4rem}
+    .legal .updated{color:var(--muted-2);font-size:.85rem;margin-bottom:2rem}
+    .legal h2{font-size:1.25rem;margin:2rem 0 .6rem}
+    .legal p,.legal li{color:var(--muted);font-size:.97rem}
+    .legal ul{margin:.6rem 0 .6rem 1.2rem;display:flex;flex-direction:column;gap:.4rem}
+    .legal a{color:var(--gold-light)}
+    .legal .back{display:inline-block;margin-bottom:1.5rem;color:var(--emerald-glow);font-weight:600}
+  </style>
+</head>
+<body>
+  <main class="legal">
+    <a class="back" href="index.html">← Back to VVault</a>
+    <h1>Privacy Policy</h1>
+    <p class="updated">Last updated: <span id="d"></span></p>
+
+    <p>VVault ("we", "us") is built privacy-first. This policy explains what we collect, why, and the choices you have. By using VVault you agree to this policy.</p>
+
+    <h2>1. What VVault stores</h2>
+    <p>The vouchers you add — brand, amount, voucher code, PIN, expiry date and category — are stored <strong>on your device</strong>. Voucher codes and PINs are encrypted on-device using AES-GCM with a key held in your phone's secure keystore/keychain.</p>
+
+    <h2>2. SMS &amp; clipboard</h2>
+    <p>VVault parses a message <strong>only when you paste it or share it to the app</strong>. We do not read your SMS inbox silently or in the background. When you use AI import, the message text you provide may be sent to our parsing service solely to extract voucher details, and is not retained for advertising or profiling.</p>
+
+    <h2>3. Optional cloud sync</h2>
+    <p>If you enable sync, your vouchers are synced to our backend so you can use multiple devices. Sensitive fields remain encrypted, so they are not readable on the server. Sync is optional — VVault is fully functional offline.</p>
+
+    <h2>4. Account data</h2>
+    <p>If you create an account (e.g. via email or Google sign-in), we store the minimum needed to authenticate you. We use this only to operate the service.</p>
+
+    <h2>5. Crash, error &amp; usage analytics</h2>
+    <p>We use privacy-hardened crash reporting to fix bugs and improve stability; reports are stripped of personal voucher content. Our website uses Google Analytics with IP anonymization to understand aggregate, anonymous traffic (e.g. page views). It does not identify you personally and never has access to your vouchers.</p>
+
+    <h2>6. What we never do</h2>
+    <ul>
+      <li>We never sell your personal data.</li>
+      <li>We never use your voucher codes for anything other than showing them back to you.</li>
+      <li>We never read your messages without an explicit action from you.</li>
+    </ul>
+
+    <h2>7. Your choices</h2>
+    <ul>
+      <li>Use VVault entirely offline with no account.</li>
+      <li>Turn sync on or off at any time.</li>
+      <li>Delete your account and associated synced data from within the app.</li>
+    </ul>
+
+    <h2>8. Data deletion</h2>
+    <p>You can delete individual vouchers, or request full account deletion in the app, which removes your synced data from our servers.</p>
+
+    <h2>9. Contact</h2>
+    <p>Questions? Email <a href="mailto:support@vvault.in">support@vvault.in</a>.</p>
+
+    <p style="margin-top:2.5rem"><a class="back" href="index.html">← Back to VVault</a></p>
+  </main>
+  <script>document.getElementById('d').textContent=new Date().toLocaleDateString('en-IN',{year:'numeric',month:'long',day:'numeric'});</script>
+</body>
+</html>

@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VVault — Never let a gift card expire again</title>
+  <meta name="description" content="VVault stores, organizes and protects every gift card and voucher you own. AI reads your voucher SMS, smart reminders fire before expiry, and everything stays encrypted and offline-first on your device." />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="VVault — Your vouchers. Vaulted." />
+  <meta property="og:description" content="Every gift card and voucher you own — captured automatically, never expired, always in one secure place." />
+  <meta property="og:url" content="https://vvault.in" />
+  <meta property="og:site_name" content="VVault" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="VVault — Never let a gift card expire again" />
+  <meta name="twitter:description" content="AI-powered voucher capture, smart expiry reminders, and bank-grade privacy. Made for India." />
+  <meta name="theme-color" content="#070D0A" />
+  <link rel="canonical" href="https://vvault.in" />
+
+  <!-- Analytics (set your GA4 ID in analytics.js) -->
+  <script src="analytics.js"></script>
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "VVault",
+    "operatingSystem": "ANDROID, IOS",
+    "applicationCategory": "FinanceApplication",
+    "description": "Store, organize and protect every gift card and voucher you own. AI-powered SMS import, smart expiry reminders, biometric lock and client-side encryption.",
+    "url": "https://vvault.in",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ====== NAVBAR ====== -->
+  <header class="nav" id="nav">
+    <a class="nav__brand" href="#top" aria-label="VVault home">
+      <span class="brand-logo" aria-hidden="true">
+        <!-- VVault medallion mark -->
+        <svg viewBox="0 0 1024 1024" width="36" height="36" role="img" aria-label="VVault logo">
+          <defs>
+            <radialGradient id="navCoin" cx="38%" cy="32%" r="82%">
+              <stop offset="0%" stop-color="#15281F"/><stop offset="58%" stop-color="#0C1A14"/><stop offset="100%" stop-color="#060B08"/>
+            </radialGradient>
+            <linearGradient id="navGold" x1="0%" y1="0%" x2="60%" y2="100%">
+              <stop offset="0%" stop-color="#F8E9B6"/><stop offset="34%" stop-color="#E6C56A"/><stop offset="62%" stop-color="#C8962E"/><stop offset="100%" stop-color="#8A5C19"/>
+            </linearGradient>
+            <linearGradient id="navRim" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#F4E2A4"/><stop offset="50%" stop-color="#C99A33"/><stop offset="100%" stop-color="#7E531A"/>
+            </linearGradient>
+            <radialGradient id="navHalo" cx="50%" cy="55%" r="50%">
+              <stop offset="0%" stop-color="#34D399" stop-opacity="0.55"/><stop offset="100%" stop-color="#34D399" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+          <circle cx="512" cy="512" r="496" fill="url(#navCoin)"/>
+          <circle cx="512" cy="526" r="270" fill="url(#navHalo)"/>
+          <circle cx="512" cy="512" r="496" fill="none" stroke="url(#navRim)" stroke-width="18"/>
+          <path d="M331 387 L512 656 L693 387" fill="none" stroke="url(#navGold)" stroke-width="78" stroke-linejoin="miter"/>
+          <path d="M395 358 L512 535 L629 358" fill="none" stroke="url(#navGold)" stroke-width="30" stroke-linejoin="miter" opacity="0.5"/>
+        </svg>
+      </span>
+      <span class="brand-word">VVault</span>
+    </a>
+
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#how">How it works</a>
+      <a href="#features">Features</a>
+      <a href="#why">Why VVault</a>
+      <a href="#security">Security</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+
+    <a href="#download" class="btn btn--gold nav__cta">Get the app</a>
+    <button class="nav__menu" id="navMenu" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main id="top">
+
+    <!-- ====== HERO ====== -->
+    <section class="hero">
+      <div class="hero__glow" aria-hidden="true"></div>
+      <div class="hero__inner">
+        <div class="hero__copy">
+          <h1>Your vouchers.<br><span class="grad">Vaulted.</span></h1>
+          <p class="lede">
+            Every gift card you own — captured by AI, locked like a vault,
+            and never left to expire.
+          </p>
+
+          <div class="hero__cta" id="download-top">
+            <a href="#download" class="store-badge store-badge--play" aria-label="Get it on Google Play">
+              <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="#34D399" d="M3.6 1.8c-.3.3-.5.8-.5 1.4v17.6c0 .6.2 1.1.5 1.4l.1.1L13 13.1v-.2L3.7 1.7l-.1.1z"/><path fill="#E6C56A" d="M16.5 16.4 13 13v-.2l3.5-3.5.1.1 4.2 2.4c1.2.7 1.2 1.8 0 2.5l-4.3 2.1z"/><path fill="#059669" d="M16.6 16.3 13 12.9 3.6 22.3c.4.4 1.1.5 1.8.1l11.2-6.1z"/><path fill="#16A34A" d="M16.6 9.5 5.4 3.4c-.7-.4-1.4-.3-1.8.1L13 12.9l3.6-3.4z"/></svg>
+              <span><small>GET IT ON</small><strong>Google Play</strong></span>
+            </a>
+            <a href="#download" class="store-badge store-badge--apple" aria-label="Download on the App Store — coming soon">
+              <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="#fff" d="M16.4 12.7c0-2.2 1.8-3.3 1.9-3.3-1-1.5-2.6-1.7-3.2-1.7-1.4-.1-2.6.8-3.3.8-.7 0-1.7-.8-2.8-.8-1.4 0-2.8.8-3.5 2.1-1.5 2.6-.4 6.5 1.1 8.6.7 1 1.5 2.2 2.6 2.1 1-.04 1.4-.7 2.7-.7 1.2 0 1.6.7 2.7.6 1.1-.02 1.8-1 2.5-2 .8-1.2 1.1-2.3 1.1-2.4-.02-.01-2.1-.8-2.1-3.2zM14.3 6.3c.6-.7 1-1.7.9-2.7-.8.03-1.9.6-2.5 1.3-.5.6-1 1.6-.9 2.6.9.07 1.8-.5 2.5-1.2z"/></svg>
+              <span><small>COMING SOON</small><strong>App Store</strong></span>
+            </a>
+          </div>
+
+          <div class="trust">
+            <span>🔒 Encrypted</span><span>📴 Offline-first</span><span>👆 Biometric-locked</span>
+          </div>
+        </div>
+
+        <!-- Phone mockup — real "My Vault" dashboard -->
+        <div class="hero__device" aria-hidden="true">
+          <div class="phone">
+            <div class="phone__notch"></div>
+            <div class="phone__screen">
+              <div class="app-statusbar"><span>9:41</span><span class="sb-ic">▮▮▮ ▾ 100</span></div>
+
+              <div class="app-topbar">
+                <span class="app-topbar__title">My Vault</span>
+                <span class="app-topbar__icons">⌕ &nbsp; ⚙</span>
+              </div>
+
+              <!-- Vault Summary -->
+              <div class="summary">
+                <div class="summary__label">Vault Summary</div>
+                <div class="summary__total">₹18,450 <small>total value</small></div>
+                <div class="summary__kpis">
+                  <div class="kpi"><span class="kpi__l">⊞ Active</span><span class="kpi__v">12</span></div>
+                  <div class="kpi kpi--alert"><span class="kpi__l">◷ ≤7d</span><span class="kpi__v">1</span></div>
+                  <div class="kpi kpi--warn"><span class="kpi__l">▦ Month</span><span class="kpi__v">3</span></div>
+                </div>
+              </div>
+
+              <!-- Wallet deck handle -->
+              <div class="deck-handle">⇕ Fan out</div>
+
+              <!-- Stacked wallet deck -->
+              <div class="deck">
+                <div class="vcard vcard--peek" style="--g1:#232F3E;--g2:#131A22">
+                  <div class="vcard__head"><span class="vlogo" style="color:#FF9900">a</span><span class="vbrand">Amazon</span><span class="vcat">E-Commerce</span></div>
+                </div>
+                <div class="vcard vcard--peek" style="--g1:#2874F0;--g2:#1A4FAF">
+                  <div class="vcard__head"><span class="vlogo" style="color:#2874F0">F</span><span class="vbrand">Flipkart</span><span class="vcat">E-Commerce</span></div>
+                </div>
+                <div class="vcard vcard--front" style="--g1:#FF3F6C;--g2:#C2255C">
+                  <div class="vcard__head"><span class="vlogo" style="color:#FF3F6C">M</span><span class="vbrand">Myntra</span><span class="vcat">Fashion</span></div>
+                  <div class="vcard__value">₹1,500</div>
+                  <div class="vcard__foot">
+                    <span class="vcode">••••7741 ⧉</span>
+                    <span class="vexp vexp--warn">⚠ 6 days left</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== HOW IT WORKS ====== -->
+    <section class="section" id="how">
+      <div class="section__head">
+        <span class="kicker">How it works</span>
+        <h2>From SMS to saved in seconds</h2>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="step__num">1</div>
+          <h3>Paste the SMS</h3>
+          <p>Share or paste any voucher message.</p>
+        </div>
+        <div class="step">
+          <div class="step__num">2</div>
+          <h3>AI does the rest</h3>
+          <p>Brand, code, amount and expiry — extracted instantly.</p>
+        </div>
+        <div class="step">
+          <div class="step__num">3</div>
+          <h3>Never miss expiry</h3>
+          <p>Smart reminders nudge you before it lapses.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== FEATURES ====== -->
+    <section class="section section--alt" id="features">
+      <div class="section__head">
+        <span class="kicker">Features</span>
+        <h2>Everything your wallet's been missing</h2>
+      </div>
+
+      <div class="feat-grid">
+        <div class="feat"><span class="feat__ic">🤖</span><h3>AI SMS import</h3><p>Reads any brand's voucher text. No templates.</p></div>
+        <div class="feat"><span class="feat__ic">⏰</span><h3>Smart reminders</h3><p>Escalating nudges as expiry draws near.</p></div>
+        <div class="feat"><span class="feat__ic">🔐</span><h3>Bank-grade security</h3><p>On-device encryption and biometric lock.</p></div>
+        <div class="feat"><span class="feat__ic">🎴</span><h3>Brand-perfect cards</h3><p>Real logos, auto-sorted by category.</p></div>
+        <div class="feat"><span class="feat__ic">📴</span><h3>Works offline</h3><p>Everything runs without an internet connection.</p></div>
+        <div class="feat"><span class="feat__ic">☁️</span><h3>Optional sync</h3><p>Across devices, encrypted end to end.</p></div>
+      </div>
+    </section>
+
+    <!-- ====== WHY VVAULT / USP ====== -->
+    <section class="section" id="why">
+      <div class="section__head">
+        <span class="kicker">Why VVault</span>
+        <h2>What makes it stand out</h2>
+      </div>
+      <div class="usp-grid">
+        <div class="usp"><span class="usp__ic">🇮🇳</span><h3>Built for India</h3><p>Tuned for Indian brands, ₹ and the SMS formats you actually get.</p></div>
+        <div class="usp"><span class="usp__ic">🔐</span><h3>Truly private</h3><p>Your codes are encrypted on-device — even we can't read them.</p></div>
+        <div class="usp"><span class="usp__ic">⏳</span><h3>Never lose money</h3><p>The only wallet that fights voucher expiry for you.</p></div>
+      </div>
+    </section>
+
+    <!-- ====== SECURITY ====== -->
+    <section class="section section--alt" id="security">
+      <div class="security">
+        <div class="security__copy">
+          <span class="kicker">Security &amp; privacy</span>
+          <h2>Locked like a vault. Because it is one.</h2>
+          <p>Codes and PINs are encrypted on your device and stay unreadable — even with cloud sync on.</p>
+          <ul class="sec-list">
+            <li>✅ On-device AES-GCM encryption</li>
+            <li>✅ Biometric lock on every open</li>
+            <li>✅ SMS read only when you paste it</li>
+            <li>✅ We never sell your data</li>
+          </ul>
+        </div>
+        <div class="security__art" aria-hidden="true">
+          <div class="vaultmark">
+            <svg viewBox="0 0 1024 1024" width="240" height="240" role="img" aria-label="VVault secure mark">
+              <defs>
+                <radialGradient id="secCoin" cx="38%" cy="32%" r="82%"><stop offset="0%" stop-color="#15281F"/><stop offset="58%" stop-color="#0C1A14"/><stop offset="100%" stop-color="#060B08"/></radialGradient>
+                <linearGradient id="secGold" x1="0%" y1="0%" x2="60%" y2="100%"><stop offset="0%" stop-color="#F8E9B6"/><stop offset="34%" stop-color="#E6C56A"/><stop offset="62%" stop-color="#C8962E"/><stop offset="100%" stop-color="#8A5C19"/></linearGradient>
+                <linearGradient id="secRim" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#F4E2A4"/><stop offset="50%" stop-color="#C99A33"/><stop offset="100%" stop-color="#7E531A"/></linearGradient>
+                <radialGradient id="secHalo" cx="50%" cy="55%" r="50%"><stop offset="0%" stop-color="#34D399" stop-opacity="0.55"/><stop offset="100%" stop-color="#34D399" stop-opacity="0"/></radialGradient>
+              </defs>
+              <circle cx="512" cy="512" r="372" fill="url(#secCoin)"/>
+              <circle cx="512" cy="526" r="240" fill="url(#secHalo)"/>
+              <circle cx="512" cy="512" r="372" fill="none" stroke="url(#secRim)" stroke-width="13"/>
+              <circle cx="512" cy="512" r="322" fill="none" stroke="#E9CD7C" stroke-width="7" stroke-dasharray="5 44" stroke-linecap="round" opacity="0.5"/>
+              <path d="M405 398 L512 555 L619 398" fill="none" stroke="#E9CD7C" stroke-width="32" stroke-linejoin="miter" opacity="0.55"/>
+              <path d="M341 427 L512 676 L683 427" fill="none" stroke="url(#secGold)" stroke-width="68" stroke-linejoin="miter"/>
+              <path d="M341 427 L512 676 L683 427" fill="none" stroke="#FFF4D6" stroke-width="7.9" stroke-linejoin="miter" opacity="0.5"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== DOWNLOAD ====== -->
+    <section class="section download" id="download">
+      <div class="section__head">
+        <span class="kicker">Get VVault</span>
+        <h2>Stop losing gift cards.</h2>
+        <p class="section__sub">Scan to download. Free to start.</p>
+      </div>
+
+      <div class="dl-grid">
+        <div class="dl-card">
+          <div class="qr" id="qr-android" data-url="https://play.google.com/store/apps/details?id=in.vvault.app"></div>
+          <a href="https://play.google.com/store/apps/details?id=in.vvault.app" class="store-badge store-badge--play" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="#34D399" d="M3.6 1.8c-.3.3-.5.8-.5 1.4v17.6c0 .6.2 1.1.5 1.4l.1.1L13 13.1v-.2L3.7 1.7l-.1.1z"/><path fill="#E6C56A" d="M16.5 16.4 13 13v-.2l3.5-3.5.1.1 4.2 2.4c1.2.7 1.2 1.8 0 2.5l-4.3 2.1z"/><path fill="#059669" d="M16.6 16.3 13 12.9 3.6 22.3c.4.4 1.1.5 1.8.1l11.2-6.1z"/><path fill="#16A34A" d="M16.6 9.5 5.4 3.4c-.7-.4-1.4-.3-1.8.1L13 12.9l3.6-3.4z"/></svg>
+            <span><small>GET IT ON</small><strong>Google Play</strong></span>
+          </a>
+        </div>
+        <div class="dl-card">
+          <div class="qr" id="qr-ios" data-url="https://vvault.in"></div>
+          <a href="#" class="store-badge store-badge--apple is-soon" aria-disabled="true">
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="#fff" d="M16.4 12.7c0-2.2 1.8-3.3 1.9-3.3-1-1.5-2.6-1.7-3.2-1.7-1.4-.1-2.6.8-3.3.8-.7 0-1.7-.8-2.8-.8-1.4 0-2.8.8-3.5 2.1-1.5 2.6-.4 6.5 1.1 8.6.7 1 1.5 2.2 2.6 2.1 1-.04 1.4-.7 2.7-.7 1.2 0 1.6.7 2.7.6 1.1-.02 1.8-1 2.5-2 .8-1.2 1.1-2.3 1.1-2.4-.02-.01-2.1-.8-2.1-3.2zM14.3 6.3c.6-.7 1-1.7.9-2.7-.8.03-1.9.6-2.5 1.3-.5.6-1 1.6-.9 2.6.9.07 1.8-.5 2.5-1.2z"/></svg>
+            <span><small>COMING SOON</small><strong>App Store</strong></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== FAQ ====== -->
+    <section class="section section--alt" id="faq">
+      <div class="section__head">
+        <span class="kicker">FAQ</span>
+        <h2>Good questions, straight answers</h2>
+      </div>
+      <div class="faq">
+        <details><summary>Is VVault free?</summary><p>Yes — free to start, no credit card needed.</p></details>
+        <details><summary>Is my data safe?</summary><p>Codes and PINs are encrypted on-device and locked behind biometrics. Even with sync on, we can't read them.</p></details>
+        <details><summary>Do you read my SMS automatically?</summary><p>No. A message is parsed only when you paste or share it — never silently.</p></details>
+        <details><summary>Which brands work?</summary><p>Any of them. The AI reads voucher texts from any vendor, no templates.</p></details>
+        <details><summary>Android and iOS?</summary><p>Live on Android; iOS is coming soon.</p></details>
+      </div>
+    </section>
+
+    <!-- ====== FINAL CTA ====== -->
+    <section class="cta-band">
+      <div class="cta-band__glow" aria-hidden="true"></div>
+      <h2>Never let a gift card expire again.</h2>
+      <p>One vault for every voucher. Captured by AI, guarded like a bank.</p>
+      <a href="#download" class="btn btn--gold btn--lg">Get VVault</a>
+    </section>
+  </main>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="footer">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <a class="footer__logo" href="#top" aria-label="VVault home">
+          <span class="brand-logo" aria-hidden="true">
+            <svg viewBox="0 0 1024 1024" width="30" height="30" role="img" aria-label="VVault logo">
+              <defs>
+                <radialGradient id="ftCoin" cx="38%" cy="32%" r="82%"><stop offset="0%" stop-color="#15281F"/><stop offset="58%" stop-color="#0C1A14"/><stop offset="100%" stop-color="#060B08"/></radialGradient>
+                <linearGradient id="ftGold" x1="0%" y1="0%" x2="60%" y2="100%"><stop offset="0%" stop-color="#F8E9B6"/><stop offset="34%" stop-color="#E6C56A"/><stop offset="62%" stop-color="#C8962E"/><stop offset="100%" stop-color="#8A5C19"/></linearGradient>
+                <linearGradient id="ftRim" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#F4E2A4"/><stop offset="50%" stop-color="#C99A33"/><stop offset="100%" stop-color="#7E531A"/></linearGradient>
+              </defs>
+              <circle cx="512" cy="512" r="496" fill="url(#ftCoin)"/>
+              <circle cx="512" cy="512" r="496" fill="none" stroke="url(#ftRim)" stroke-width="18"/>
+              <path d="M331 387 L512 656 L693 387" fill="none" stroke="url(#ftGold)" stroke-width="78" stroke-linejoin="miter"/>
+            </svg>
+          </span>
+          <span class="brand-word">VVault</span>
+        </a>
+        <p class="footer__tag">Your vouchers. Vaulted.</p>
+        <p class="footer__contact">Contact us · <a href="mailto:support@vvault.in">support@vvault.in</a></p>
+      </div>
+
+      <nav class="footer__nav" aria-label="Footer">
+        <div class="footer__col">
+          <h4>Product</h4>
+          <a href="#features">Features</a>
+          <a href="#why">Why VVault</a>
+          <a href="#security">Security</a>
+          <a href="#download">Download</a>
+        </div>
+        <div class="footer__col">
+          <h4>Support</h4>
+          <a href="#faq">FAQ</a>
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+          <a href="mailto:support@vvault.in">Contact us</a>
+        </div>
+      </nav>
+    </div>
+
+    <div class="footer__bottom">
+      <span>© <span id="year"></span> VVault</span>
+      <span>vvault.in</span>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Service — VVault</title>
+  <meta name="description" content="The terms that govern your use of the VVault app and website." />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <script src="analytics.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .legal{max-width:46rem;margin:0 auto;padding:clamp(2rem,5vw,4rem) clamp(1rem,4vw,2rem)}
+    .legal h1{font-size:clamp(2rem,4vw,2.6rem);margin-bottom:.4rem}
+    .legal .updated{color:var(--muted-2);font-size:.85rem;margin-bottom:2rem}
+    .legal h2{font-size:1.25rem;margin:2rem 0 .6rem}
+    .legal p,.legal li{color:var(--muted);font-size:.97rem}
+    .legal ul{margin:.6rem 0 .6rem 1.2rem;display:flex;flex-direction:column;gap:.4rem}
+    .legal a{color:var(--gold-light)}
+    .legal .back{display:inline-block;margin-bottom:1.5rem;color:var(--emerald-glow);font-weight:600}
+  </style>
+</head>
+<body>
+  <main class="legal">
+    <a class="back" href="index.html">← Back to VVault</a>
+    <h1>Terms of Service</h1>
+    <p class="updated">Last updated: <span id="d"></span></p>
+
+    <p>Welcome to VVault. By downloading or using the VVault app or this website, you agree to these terms. If you don't agree, please don't use the service.</p>
+
+    <h2>1. The service</h2>
+    <p>VVault helps you store, organize and get reminders for your gift cards and vouchers. It is provided to help you keep track of your own vouchers; it is not affiliated with, and does not issue, any third-party brand's vouchers.</p>
+
+    <h2>2. Your responsibilities</h2>
+    <ul>
+      <li>You're responsible for the accuracy of the voucher details you add.</li>
+      <li>You're responsible for keeping your device and account secure.</li>
+      <li>Use VVault only for vouchers you legitimately own.</li>
+    </ul>
+
+    <h2>3. Reminders &amp; accuracy</h2>
+    <p>VVault provides expiry reminders as a convenience. While we work hard to parse and remind accurately, we cannot guarantee that every reminder fires or that AI-extracted details are always correct. Always verify important details with the issuing brand. We are not liable for a voucher you miss or that expires.</p>
+
+    <h2>4. Accounts</h2>
+    <p>If you create an account, you're responsible for activity under it. We may suspend accounts that abuse the service.</p>
+
+    <h2>5. Intellectual property</h2>
+    <p>The VVault name, logo and app are owned by us. Brand names and logos shown for your vouchers belong to their respective owners and are used only to help you identify your vouchers.</p>
+
+    <h2>6. Availability</h2>
+    <p>The service is provided "as is" and "as available". Features may change, and optional cloud features may experience downtime.</p>
+
+    <h2>7. Limitation of liability</h2>
+    <p>To the maximum extent permitted by law, VVault is not liable for any indirect or consequential loss, including lost voucher value, arising from use of the service.</p>
+
+    <h2>8. Changes</h2>
+    <p>We may update these terms. Continued use after changes means you accept the updated terms.</p>
+
+    <h2>9. Contact</h2>
+    <p>Questions about these terms? Email <a href="mailto:support@vvault.in">support@vvault.in</a>.</p>
+
+    <p style="margin-top:2.5rem"><a class="back" href="index.html">← Back to VVault</a></p>
+  </main>
+  <script>document.getElementById('d').textContent=new Date().toLocaleDateString('en-IN',{year:'numeric',month:'long',day:'numeric'});</script>
+</body>
+</html>
