@@ -1,0 +1,23 @@
+{
+  "name": "primary",
+  "version": "1.0.0",
+  "description": "A self-contained static website for **VVault** (vvault.in). No build step, no framework — just HTML, CSS and a little JS.",
+  "main": "analytics.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/avtrixx-droid/VVault.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/avtrixx-droid/VVault/issues"
+  },
+  "homepage": "https://github.com/avtrixx-droid/VVault#readme",
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1"
+  }
+}
