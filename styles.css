@@ -22,6 +22,9 @@ h1,h2,h3,h4{line-height:1.15;font-weight:800;letter-spacing:-.02em}
 section{scroll-margin-top:72px}
 .grad{background:linear-gradient(120deg,var(--gold-light),var(--gold-foil));-webkit-background-clip:text;background-clip:text;color:transparent}
 
+/* Inline line-icons (replace emoji for a premium, consistent look) */
+.i{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;display:inline-block;vertical-align:middle}
+
 /* ====== Buttons & badges ====== */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;
   padding:.8rem 1.4rem;border-radius:999px;font-weight:700;font-size:.95rem;
@@ -71,6 +74,8 @@ section{scroll-margin-top:72px}
 .lede{font-size:clamp(1rem,1.4vw,1.15rem);color:var(--muted);max-width:34rem;margin-bottom:1.8rem}
 .hero__cta{display:flex;flex-wrap:wrap;gap:.8rem;margin-bottom:1.6rem}
 .trust{display:flex;flex-wrap:wrap;gap:1rem 1.4rem;font-size:.85rem;color:var(--muted-2)}
+.trust span{display:inline-flex;align-items:center;gap:.45rem}
+.trust span svg{width:15px;height:15px;color:var(--gold-light)}
 
 /* Phone mockup — hyperrealistic titanium device */
 .hero__device{display:grid;place-items:center;perspective:1600px}
@@ -113,12 +118,14 @@ section{scroll-margin-top:72px}
 .phone__sheen{position:absolute;inset:9px;border-radius:46px;pointer-events:none;z-index:6;
   background:linear-gradient(125deg,rgba(255,255,255,.14) 0%,rgba(255,255,255,.04) 14%,transparent 34%,transparent 100%)}
 .app-statusbar{display:flex;justify-content:space-between;align-items:center;font-size:.66rem;font-weight:600;color:#e6efe9;margin:.2rem .3rem .6rem}
-.sb-ic{letter-spacing:1px;font-size:.55rem}
+.sb-ic{display:inline-flex;align-items:center;gap:5px;color:#e6efe9}
+.sb-ic svg{height:11px;width:auto}
 
 /* Top bar */
 .app-topbar{display:flex;justify-content:space-between;align-items:center;padding:.2rem .3rem .7rem}
 .app-topbar__title{font-size:1.15rem;font-weight:700;color:#fff}
-.app-topbar__icons{font-size:.95rem;color:var(--muted)}
+.app-topbar__icons{display:inline-flex;align-items:center;gap:.6rem;color:var(--muted)}
+.app-topbar__icons svg{width:16px;height:16px}
 
 /* Vault summary */
 .summary{background:linear-gradient(135deg,#047857,#065F46);border-radius:18px;padding:.85rem .9rem;
@@ -130,12 +137,15 @@ section{scroll-margin-top:72px}
 .kpi{flex:1;background:rgba(255,255,255,.15);border-radius:9px;padding:.35rem .45rem;display:flex;flex-direction:column;gap:.2rem}
 .kpi--alert{background:rgba(220,38,38,.28)}
 .kpi--warn{background:rgba(217,119,6,.28)}
-.kpi__l{font-size:.52rem;font-weight:500;color:rgba(255,255,255,.85);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.kpi__l{font-size:.52rem;font-weight:500;color:rgba(255,255,255,.85);display:inline-flex;align-items:center;gap:.22rem;white-space:nowrap;overflow:hidden}
+.kpi__l svg{width:10px;height:10px;flex-shrink:0}
 .kpi__v{font-size:.95rem;font-weight:700;color:#fff}
 
 /* Deck handle */
 .deck-handle{align-self:flex-end;width:fit-content;margin:.1rem .3rem .45rem auto;font-size:.6rem;font-weight:600;color:var(--muted);
-  background:rgba(255,255,255,.06);border:1px solid var(--line-soft);border-radius:999px;padding:.25rem .6rem;text-align:right}
+  background:rgba(255,255,255,.06);border:1px solid var(--line-soft);border-radius:999px;padding:.3rem .65rem;
+  display:inline-flex;align-items:center;gap:.3rem}
+.deck-handle svg{width:11px;height:11px}
 
 /* Wallet deck — stacked */
 .deck{position:relative}
@@ -151,8 +161,10 @@ section{scroll-margin-top:72px}
 .vcat{font-size:.56rem;font-weight:500;color:rgba(255,255,255,.85);background:rgba(255,255,255,.14);padding:.15rem .45rem;border-radius:999px}
 .vcard__value{font-size:1.35rem;font-weight:800;color:#fff;letter-spacing:-.5px;margin:.55rem 0 .5rem}
 .vcard__foot{display:flex;justify-content:space-between;align-items:center}
-.vcode{font-family:ui-monospace,Menlo,monospace;font-size:.66rem;letter-spacing:1.5px;color:rgba(255,255,255,.82)}
-.vexp{display:inline-flex;align-items:center;gap:.2rem;font-size:.6rem;font-weight:600;background:rgba(255,255,255,.12);padding:.2rem .45rem;border-radius:999px;color:rgba(255,255,255,.85)}
+.vcode{font-family:ui-monospace,Menlo,monospace;font-size:.66rem;letter-spacing:1.5px;color:rgba(255,255,255,.82);display:inline-flex;align-items:center;gap:.35rem}
+.vcode svg{width:11px;height:11px;color:rgba(255,255,255,.6)}
+.vexp{display:inline-flex;align-items:center;gap:.25rem;font-size:.6rem;font-weight:600;background:rgba(255,255,255,.12);padding:.22rem .5rem;border-radius:999px;color:rgba(255,255,255,.85)}
+.vexp svg{width:11px;height:11px}
 .vexp--warn{color:#FCD34D}
 .vexp--urgent{color:#FCA5A5}
 
@@ -178,7 +190,7 @@ section{scroll-margin-top:72px}
 .feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
 .feat{background:var(--surface);border:1px solid var(--line-soft);border-radius:var(--radius-lg);padding:1.6rem;transition:border-color .25s,transform .25s}
 .feat:hover{border-color:var(--line);transform:translateY(-4px)}
-.feat__ic{font-size:1.6rem;display:block;margin-bottom:.7rem}
+.feat__ic{width:30px;height:30px;display:block;margin-bottom:.9rem;color:var(--emerald-glow)}
 .feat h3{font-size:1.1rem;margin-bottom:.35rem}
 .feat p{color:var(--muted);font-size:.92rem}
 
@@ -186,7 +198,7 @@ section{scroll-margin-top:72px}
 .usp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.3rem}
 .usp{background:linear-gradient(160deg,var(--surface-2),var(--surface));border:1px solid var(--line);border-radius:var(--radius-lg);padding:1.7rem;transition:transform .25s}
 .usp:hover{transform:translateY(-4px)}
-.usp__ic{font-size:1.8rem;display:block;margin-bottom:.7rem}
+.usp__ic{width:32px;height:32px;display:block;margin-bottom:.9rem;color:var(--gold-light)}
 .usp h3{font-size:1.15rem;margin-bottom:.4rem}
 .usp p{color:var(--muted);font-size:.92rem}
 
@@ -194,7 +206,9 @@ section{scroll-margin-top:72px}
 .security{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(2rem,5vw,4rem);align-items:center}
 .security h2{font-size:clamp(1.7rem,3.4vw,2.4rem);margin-bottom:1rem}
 .security__copy > p{color:var(--muted);margin-bottom:1.4rem;max-width:34rem}
-.sec-list{list-style:none;display:flex;flex-direction:column;gap:.7rem;font-size:.95rem;color:#cbd6cf}
+.sec-list{list-style:none;display:flex;flex-direction:column;gap:.8rem;font-size:.95rem;color:#cbd6cf}
+.sec-list li{display:flex;align-items:center;gap:.6rem}
+.sec-list li svg{width:18px;height:18px;color:var(--emerald-glow);flex-shrink:0}
 .security__art{display:grid;place-items:center}
 .vaultmark{filter:drop-shadow(0 20px 50px rgba(52,211,153,.25))}
 
