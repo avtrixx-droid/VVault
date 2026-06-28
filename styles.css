@@ -72,14 +72,46 @@ section{scroll-margin-top:72px}
 .hero__cta{display:flex;flex-wrap:wrap;gap:.8rem;margin-bottom:1.6rem}
 .trust{display:flex;flex-wrap:wrap;gap:1rem 1.4rem;font-size:.85rem;color:var(--muted-2)}
 
-/* Phone mockup */
-.hero__device{display:grid;place-items:center}
-.phone{position:relative;width:280px;height:570px;border-radius:42px;background:linear-gradient(160deg,#1c2a23,#0a120e);
-  padding:14px;border:1px solid rgba(232,205,124,.18);box-shadow:var(--shadow);
-  animation:float 6s ease-in-out infinite}
-@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
-.phone__notch{position:absolute;top:14px;left:50%;transform:translateX(-50%);width:120px;height:24px;background:#0a120e;border-radius:0 0 16px 16px;z-index:3}
-.phone__screen{height:100%;border-radius:30px;background:linear-gradient(180deg,#0a130e,#070d0a);padding:.9rem .8rem;overflow:hidden;position:relative}
+/* Phone mockup — hyperrealistic titanium device */
+.hero__device{display:grid;place-items:center;perspective:1600px}
+.phone{position:relative;width:286px;height:586px;border-radius:54px;
+  /* brushed-titanium rail: bright edges, dark faces */
+  background:
+    linear-gradient(135deg,#5a615f 0%,#23282a 16%,#0d0f10 30%,#0d0f10 70%,#23282a 84%,#5a615f 100%);
+  padding:9px;
+  box-shadow:
+    0 2px 2px rgba(255,255,255,.18) inset,          /* top inner edge light */
+    0 -2px 3px rgba(0,0,0,.6) inset,                /* bottom inner shade */
+    0 1px 0 rgba(255,255,255,.12),                  /* hairline top highlight */
+    0 40px 80px -24px rgba(0,0,0,.85),              /* ambient drop */
+    0 18px 40px -20px rgba(0,0,0,.7),               /* contact shadow */
+    0 0 60px -10px rgba(52,211,153,.18);            /* faint emerald glow */
+  animation:float 7s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0) rotate(.001deg)}50%{transform:translateY(-12px)}}
+
+/* black glass bezel ring around the screen */
+.phone__bezel{position:relative;height:100%;border-radius:46px;background:#000;padding:5px;
+  box-shadow:0 0 0 1px rgba(255,255,255,.06) inset, 0 0 14px rgba(0,0,0,.9) inset}
+
+/* side buttons */
+.phone__btn{position:absolute;background:linear-gradient(90deg,#2c3133,#0c0e0f);border-radius:2px;z-index:5}
+.phone__btn--silent{left:-2px;top:118px;width:3px;height:26px}
+.phone__btn--vol-up{left:-2px;top:160px;width:3px;height:46px}
+.phone__btn--vol-down{left:-2px;top:218px;width:3px;height:46px}
+.phone__btn--power{right:-2px;top:188px;width:3px;height:64px;background:linear-gradient(270deg,#2c3133,#0c0e0f)}
+
+/* Dynamic Island */
+.phone__island{position:absolute;top:13px;left:50%;transform:translateX(-50%);width:88px;height:26px;
+  background:#000;border-radius:999px;z-index:4;box-shadow:0 0 0 1px rgba(255,255,255,.04)}
+.phone__cam{position:absolute;right:14px;top:50%;transform:translateY(-50%);width:9px;height:9px;border-radius:50%;
+  background:radial-gradient(circle at 35% 35%,#15323a 0%,#050709 60%);box-shadow:0 0 0 1px rgba(60,120,130,.35)}
+
+.phone__screen{height:100%;border-radius:42px;background:linear-gradient(180deg,#0b1410,#070d0a);
+  padding:2.2rem .8rem .9rem;overflow:hidden;position:relative}
+
+/* glass reflection sweep across the screen */
+.phone__sheen{position:absolute;inset:9px;border-radius:46px;pointer-events:none;z-index:6;
+  background:linear-gradient(125deg,rgba(255,255,255,.14) 0%,rgba(255,255,255,.04) 14%,transparent 34%,transparent 100%)}
 .app-statusbar{display:flex;justify-content:space-between;align-items:center;font-size:.66rem;font-weight:600;color:#e6efe9;margin:.2rem .3rem .6rem}
 .sb-ic{letter-spacing:1px;font-size:.55rem}
 
