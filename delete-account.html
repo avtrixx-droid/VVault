@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Delete Your Account — VVault</title>
+  <meta name="description" content="How to delete your VVault account and associated data, what gets removed, and how to request deletion by email." />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <script src="analytics.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .legal{max-width:46rem;margin:0 auto;padding:clamp(2rem,5vw,4rem) clamp(1rem,4vw,2rem)}
+    .legal h1{font-size:clamp(2rem,4vw,2.6rem);margin-bottom:.4rem}
+    .legal .updated{color:var(--muted-2);font-size:.85rem;margin-bottom:2rem}
+    .legal h2{font-size:1.25rem;margin:2rem 0 .6rem}
+    .legal p,.legal li{color:var(--muted);font-size:.97rem}
+    .legal ul,.legal ol{margin:.6rem 0 .6rem 1.2rem;display:flex;flex-direction:column;gap:.4rem}
+    .legal a{color:var(--gold-light)}
+    .legal .back{display:inline-block;margin-bottom:1.5rem;color:var(--emerald-glow);font-weight:600}
+  </style>
+</head>
+<body>
+  <main class="legal">
+    <a class="back" href="index.html">← Back to VVault</a>
+    <h1>Delete Your Account</h1>
+    <p class="updated">Last updated: <span id="d"></span></p>
+
+    <p>This page explains how to delete your <strong>VVault</strong> account and the data associated with it. VVault is developed by VVault (<a href="mailto:support@vvault.in">support@vvault.in</a>).</p>
+
+    <h2>Delete your account in the app</h2>
+    <p>You can permanently delete your account and all associated data directly inside VVault:</p>
+    <ol>
+      <li>Open VVault and sign in.</li>
+      <li>Go to <strong>Settings → Delete Account</strong>.</li>
+      <li>Type <strong>DELETE</strong> to confirm.</li>
+    </ol>
+    <p>Deletion is immediate and irreversible. Once complete, you will be signed out and can no longer log in with that account.</p>
+
+    <h2>What gets deleted</h2>
+    <p>Deleting your account permanently removes:</p>
+    <ul>
+      <li>Your vouchers and gift cards, including codes, PINs, amounts, expiry dates and categories.</li>
+      <li>Your profile information (name, phone number, date of birth, gender).</li>
+      <li>Your encryption keys held on our servers.</li>
+      <li>Your account login and authentication record.</li>
+    </ul>
+    <p>No account data is retained after deletion — there is no additional retention period. Anonymised, non-identifying crash and diagnostic logs that contain no voucher content may persist temporarily for stability purposes.</p>
+
+    <h2>Delete only some data</h2>
+    <p>If you don't want to delete your whole account, you can delete individual vouchers at any time from the voucher's detail screen (open a voucher → <strong>Delete</strong>). This removes that voucher and its synced copy without deleting your account.</p>
+
+    <h2>Request deletion by email</h2>
+    <p>If you can't access the app, email <a href="mailto:support@vvault.in">support@vvault.in</a> from your registered email address and ask us to delete your account. We will verify your identity and delete your account and associated data on your behalf.</p>
+
+    <h2>Contact</h2>
+    <p>Questions about deletion? Email <a href="mailto:support@vvault.in">support@vvault.in</a>.</p>
+
+    <p style="margin-top:2.5rem"><a class="back" href="index.html">← Back to VVault</a></p>
+  </main>
+  <script>document.getElementById('d').textContent=new Date().toLocaleDateString('en-IN',{year:'numeric',month:'long',day:'numeric'});</script>
+</body>
+</html>

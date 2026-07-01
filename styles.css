@@ -242,10 +242,12 @@ section{scroll-margin-top:72px}
   display:flex;flex-wrap:wrap;gap:2.5rem 3rem;justify-content:space-between}
 .footer__brand{max-width:20rem}
 .footer__logo{display:flex;align-items:center;gap:.55rem;margin-bottom:.7rem}
-.footer__tag{color:var(--muted);font-size:.92rem;margin-bottom:1rem}
-.footer__contact{font-size:.9rem;color:var(--muted-2)}
-.footer__contact a{color:var(--gold-light);font-weight:600}
-.footer__contact a:hover{text-decoration:underline}
+.footer__tag{color:var(--muted);font-size:.92rem;margin-bottom:1.4rem}
+.footer__contacts{display:flex;flex-direction:column;gap:.7rem}
+.footer__contact-row{display:inline-flex;align-items:center;gap:.6rem;width:fit-content;font-size:.92rem;font-weight:500;color:var(--muted);transition:color .2s}
+.footer__contact-row svg{flex:none;color:var(--gold-light)}
+.footer__contact-row span{transition:color .2s}
+.footer__contact-row:hover{color:var(--text)}
 .footer__nav{display:flex;gap:3.5rem}
 .footer__col{display:flex;flex-direction:column;gap:.65rem}
 .footer__col h4{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted-2);margin-bottom:.2rem}
